@@ -1,13 +1,18 @@
 <div class="contents row">
   <div class="container">
-    <%= form_tag('/tweets', method: :post) do %>
+    <%= form_tag('/quizzes', method: :post) do %>
       <h3>
-        投稿する
+        出題する
       </h3>
-      <input placeholder="Image URL" type="text" name="image" autofocus="true">
-      <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
-      <input placeholder="">
-      <input type="submit" value="SENT">
+
+      <input placeholder="画像を入れてください。" type="text" name="image" autofocus="true">
+
+      <textarea cols="30" name="text" placeholder="問題を入力してください。" rows="10"></textarea>
+      <input type="text" size="20",maxlength="30" name="answer" placeholder="答えを30文字以内で入力してください。">
+      <input type="number" placeholder="1〜10" min="1",max="10" name="point" value="1">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
     <% end %>
   </div>
 </div>
