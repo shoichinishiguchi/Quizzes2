@@ -1,1 +1,5 @@
-Hello,World
+<div class = "contents row">
+    <% @quizzes.each do |quiz| %>
+      <%= render partial: "quiz", locals: { quiz: quiz } %>
+    <% end %>
+</div>
