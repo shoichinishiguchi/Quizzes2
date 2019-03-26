@@ -4,14 +4,15 @@
       <h3>
         出題する
       </h3>
-
       <input placeholder="画像を入れてください。" type="text" name="image" autofocus="true">
 
-      <textarea cols="30" name="text" placeholder="問題を入力してください。" rows="10"></textarea>
+      <textarea cols="40" rows="10" name="text" placeholder="問題を入力してください。"></textarea>
+
       <input type="text" size="20",maxlength="30" name="answer" placeholder="答えを30文字以内で入力してください。">
+
       <input type="number" placeholder="1〜10" min="1",max="10" name="point" value="1">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+    <i class="material-icons right">出題する</i>
   </button>
     <% end %>
   </div>
