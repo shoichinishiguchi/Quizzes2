@@ -22,6 +22,14 @@
   color: black;
 }
 
+.menu{
+  font-size: 18px;
+  text-align: center;
+  height: 80px;
+  line-height: 20px;
+  color: black;
+}
+
 .a_quiz{
   width: 60%;
   min-height: 100px;

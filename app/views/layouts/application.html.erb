@@ -22,9 +22,34 @@
       <div class="col s8 teal lighten-1 header">
         <a class="header" href="/quizzes"> Quizzes! </a>
       </div>
-      <div class="col s4 cyan lighten-1  header">
-        <a class="waves-effect waves-light btn" href="/quizzes/new"> <i class="material-icons left"></i>出題する</a>
+      <% if user_signed_in? %>
+
+      <div class="col s1 cyan lighten-1 menu">
+        <%= link_to '出題' , '/quizzes/new' %>
       </div>
+      <div class="col s2 cyan lighten-1 menu">
+        <div class="userinfo">マイページ</div>
+        <div class="userinfo">タコさん:100p</div>
+      </div>
+
+      <div class="col s1 cyan lighten-1 menu">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </div>
+
+
+      <% else %>
+
+        <div class="">
+          <a href="/users/sign_in">
+          <!-- # <%= link_to "ログイン", new_user_session_path, class: 'post' %> -->
+            <span>ログイン</span>
+          </a>
+          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+        </div>
+
+
+      <% end %>
+
     </div>
 
     <%= yield %>
