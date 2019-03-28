@@ -2,4 +2,26 @@
     <% @quizzes.each do |quiz| %>
       <%= render partial: "quiz", locals: { quiz: quiz } %>
     <% end %>
+
+  <% if user_signed_in? %>
+  <div class="userinfo">
+    <%= "#{current_user.nickname}さん:#{current_user.score }ポイント" %>
+    <%= "#{@ranking.index(current_user)+1}位" %>
+  </div>
+  <% end %>
+
+  <div class="rank1">
+    <%="第1位: #{@ranking[0].nickname}" %>
+    <%="#{@ranking[0].score}ポイント" %>
+  </div>
+  <div  class="rank2">
+    <%="第2位: #{@ranking[1].nickname}" %>
+    <%="#{@ranking[1].score}ポイント" %>
+  </div>
+  <div  class="rank3">
+    <%="第3位: #{@ranking[2].nickname}" %>
+    <%="#{@ranking[2].score}ポイント" %>
+  </div>
+
+
 </div>
