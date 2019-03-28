@@ -2,7 +2,7 @@ class QuizzesController < ApplicationController
 
 
   def index
-    @quizzes = Quiz.all
+    @quizzes = Quiz.all.order('id DESC')
     @ranking = User.order('score DESC')
   end
 
@@ -22,6 +22,14 @@ class QuizzesController < ApplicationController
   end
 
   def show
+    @quiz = Quiz.find(params[:id])
+  end
+
+  def answer
+    if Quiz.find(params[:id]).answer == params[:answer] then
+    current_user.score += Quiz.find(params[:id]).point
+    end
+    current_user.save
     @quiz = Quiz.find(params[:id])
   end
 
