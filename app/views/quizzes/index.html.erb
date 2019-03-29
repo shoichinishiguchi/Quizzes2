@@ -1,10 +1,12 @@
 <div class = "contents row">
+  <div class="section col s8">
   <% @quizzes.each do |quiz| %>
       <%= render partial: "quiz", locals: { quiz: quiz } %>
   <% end %>
+  </div>
 
   <% if user_signed_in? %>
-  <div class="userranking">
+  <div class="current_user_info content_right">
     <%= "#{current_user.nickname}さん:#{current_user.score }ポイント"  %>
       <div>
     <%= "現在#{@ranking.index(current_user)+1}位/#{User.count}人中" %>
@@ -19,18 +21,22 @@
   </div>
   <% end %>
 
+<div class="content_right ">
   <div class="rank1">
     <%="第1位: #{User.rank(1).nickname}様" %>
+    <br>
     <%="#{User.rank(1).score}ポイント" %>
   </div>
   <div  class="rank2">
     <%="第2位: #{User.rank(2).nickname}様" %>
+    <br>
     <%="#{User.rank(2).score}ポイント" %>
   </div>
   <div  class="rank3">
     <%="第3位: #{User.rank(3).nickname}様" %>
+    <br>
     <%="#{User.rank(3).score}ポイント" %>
   </div>
-
+</div>
 
 </div>

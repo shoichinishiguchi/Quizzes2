@@ -1,14 +1,17 @@
 <% if params[:answer] == @quiz.answer %>
   <div class="">
-    正解！！<%= @quiz.point %>獲得！！
+    正解！！<%= @quiz.point %>ポイント獲得！！
+    <%= link_to 'トップへ戻る', "/quizzes", method: :get %>
   </div>
   <% elsif params[:answer] == "降参" %>
     <div class="">
+    残念！<br>
     答えは、<%= @quiz.answer %> でした！
+    <%= link_to 'トップへ戻る', "/quizzes", method: :get %>
   </div>
   <% else %>
     <div class="">
-    残念！何度でも挑戦してね！
+    残念！何度でも挑戦してね！<br>
     <%= link_to '問題へ戻る', "/quizzes/#{@quiz.id}", method: :get %>
     <div class="">
     <%= link_to 'トップへ戻る', "/quizzes", method: :get %>
