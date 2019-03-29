@@ -19,7 +19,8 @@
   text-align: center;
   height: 80px;
   line-height: 80px;
-  color: black;
+  color: white;
+  font-family: monospace;
 }
 
 .menu{
@@ -31,15 +32,39 @@
 }
 
 .a_quiz{
-  width: 60%;
+  width: 95%;
   min-height: 100px;
   border: 1px solid black;
   margin-top: 5px;
+  border-radius: 5px;
 }
 
 .responsive-img{
   max-height: 180px;
   padding: 5px;
+}
+
+.show-img{
+  max-width: 66%;
+  padding:5px;
+
+}
+
+.quiz-text{
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  width: 60%;
+}
+
+.quiz-info{
+  width: 60%;
+  margin-right: 34%;
+  text-align: right;
+}
+
+.surrender{
+  padding-top: 10px;
 }
 
 .thankyou{
@@ -52,18 +77,41 @@
   float: left;
 }
 
+.more_list{
+  float: left;
+}
+
 .content_right{
   margin-top: 20px;
   float: right;
   width: 33%;
 }
 
+.current_user_info{
+
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px;
+  border-top: solid 5px black;
+  border-bottom: solid 5px black;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
 
 .rank1{
-  background-color: #FFD700;
+background-image: linear-gradient(to top left, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03);
   font-weight: 800;
   font-size: 20px;
   line-height: 40px;
+  border-top: solid 5px black;
+  border-bottom: solid 5px black;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .rank2{
@@ -72,11 +120,15 @@
   font-size: 16px;
   margin: 5px 0;
   padding: 5px 0;
-
+  text-align: center;
+  border-radius: 5px;
 }
 
 .rank3{
   background-color: #7F270A;
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 3px;
 }

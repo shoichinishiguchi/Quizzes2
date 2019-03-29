@@ -6,7 +6,7 @@
   </div>
 
   <% if user_signed_in? %>
-  <div class="userranking">
+  <div class="current_user_info content_right">
     <%= "#{current_user.nickname}さん:#{current_user.score }ポイント"  %>
       <div>
     <%= "現在#{@ranking.index(current_user)+1}位/#{User.count}人中" %>

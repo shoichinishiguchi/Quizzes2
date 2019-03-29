@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Quizzes</title>
+    <title>The quizbook</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -19,20 +19,20 @@
 
   <body>
     <div class="row">
-      <div class="col s8 teal lighten-1 header">
-        <a class="header" href="/quizzes"> Quizzes! </a>
+      <div class="col s8  indigo darken-4 header">
+        <a class="header" href="/quizzes"> The quizbook </a>
       </div>
       <% if user_signed_in? %>
 
-      <div class="col s1 cyan lighten-1 menu">
+      <div class="col s1  indigo darken-4 menu">
         <%= link_to '出題' , '/quizzes/new' %>
       </div>
-      <div class="col s2 cyan lighten-1 menu">
+      <div class="col s2  indigo darken-4 menu">
         <div class="userinfo">マイページ</div>
 
       </div>
 
-      <div class="col s1 cyan lighten-1 menu">
+      <div class="col s1  indigo darken-4 menu">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </div>
 

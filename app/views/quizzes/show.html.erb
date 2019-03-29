@@ -1,18 +1,23 @@
-  <img class="responsive-img" src="<%= @quiz.image %>">
-  <%= simple_format(@quiz.text) %>
-  <div>出題者:<%= @quiz.name %></div>
-  <div>解答:<%= @quiz.answer %></div>
-
+<img class="show-img" src="<%= @quiz.image %>">
+<div class="quiz-text">
+   <%= simple_format(@quiz.text) %>
+</div>
+<div class="quiz-info">
+  <div>問題ポイント:<%= @quiz.point %>ポイント/出題者:<%= @quiz.user.nickname %>様</div>
+</div>
 <div class="contents row">
   <div class="container">
     <%= form_tag("/quizzes/answer/#{@quiz.id}", method: :post) do %>
       <h3>
         解答する
       </h3>
-      <input type="text" size="20",maxlength="30" name="answer" placeholder="答えを30文字以内で入力してください。">
+      <input type="text" size="20",maxlength="30" name="answer" placeholder="答えを入力してください。">
       <button class="btn waves-effect waves-light" type="submit" name="action">
         <i class="material-icons right">解答する</i>
       </button>
+        <div class="surrender">
+              (わからない時は、"降参"と入力してください。答えを見ることができます。<br>ただし、ポイントはもらえません。)
+        </div>
     <% end %>
   </div>
 </div>
